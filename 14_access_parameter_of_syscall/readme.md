@@ -4,7 +4,7 @@
 
 ---
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - System calls in the Linux kernel pass their arguments in registers. The `pt_regs` structure contains the values of the processor's registers, reflecting the state of the system just before entering the kernel mode.
   - For x86_64, the first few system call arguments are passed in the `di`, `si`, `dx`, `r10`, `r8`, and `r9` registers.
   - In the provided code, the hooked version of the `open` system call retrieves the values of these registers directly from the `pt_regs` structure.
@@ -20,5 +20,5 @@
   - **Q3**: What happens if we exceed the number of register-based arguments in a system call?
     - **Answer**: If a system call takes more arguments than can be passed in registers, the additional arguments are passed on the stack. However, most system calls do not exceed this limit.
   
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Imagine a delivery service 📦 where each package has a label containing vital information: sender, receiver, weight, etc. Now, when the delivery reaches its destination (in our case, the kernel), the details from this label are used to process the package. The `pt_regs` is similar to this label, containing the vital details (arguments) required to process the system call. We can check the label (`pt_regs`) to know what's inside the package (system call arguments) and even alter it if needed! 🏷️🖊️.

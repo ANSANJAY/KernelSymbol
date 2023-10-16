@@ -1,7 +1,7 @@
 
 **Understanding `kallsyms_lookup_name` in the Linux Kernel** 🐧🔍
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - `kallsyms_lookup_name` is a kernel function specifically designed for symbol resolution within the kernel space.
   - It accepts a symbol's name as its argument.
   - If the symbol is present, it returns the symbol's address in the memory.
@@ -21,5 +21,5 @@
   - **Q3**: Why is `kallsyms_lookup_name` beneficial over hardcoding memory addresses?
     - **Answer**: Kernel versions and configurations can differ, leading to symbols being at different memory addresses. `kallsyms_lookup_name` provides a dynamic and reliable way to fetch the current address, avoiding the fragility and maintenance nightmare of hardcoded addresses.
 
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Imagine you're in a vast library 📚. Instead of searching manually for a book, you use a special tool (like `kallsyms_lookup_name`) that instantly tells you exactly where that book is. Even if the library gets new books or rearranges, this tool always knows where each book is, ensuring you don't have to remember or guess its location. Similarly, this function gives us the exact "location" of a kernel symbol, no matter how the kernel changes or evolves.

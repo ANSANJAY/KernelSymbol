@@ -2,7 +2,7 @@
 
 ---
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - The kernel has several memory sections, and they hold specific types of data. Some well-known sections are the text, data, and bss.
   - The text section contains the executable machine code.
   - The data section stores initialized static and global variables.
@@ -21,5 +21,5 @@
   - **Q3**: Why are some kernel variables stored in the bss section without initialization?
     - **Answer**: The bss section is for uninitialized data. Variables here are automatically initialized to zero, which saves space in the binary file, as it doesn't need to store an initial value.
   
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Think of the kernel as a massive book 📚 in a library. This book has different sections (like chapters). Now, if you want to know where each section starts and ends in the library's layout (which could change every time the library is organized), you would use a special tool. The provided code is like that tool for the kernel, telling you where each section is located in the memory "library." This is useful for many deep-dive tasks in kernel space! 🧐🔧.

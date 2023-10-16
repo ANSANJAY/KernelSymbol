@@ -1,6 +1,6 @@
 **Determining Function Visibility with `/proc/kallsyms`** 🕵️‍♂️🔍
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - The `/proc/kallsyms` file provides a list of kernel symbols, representing both functions and variables, along with their respective memory addresses.
   - To inspect a specific function or variable, you can filter the content of `/proc/kallsyms` using the `grep` command.
   - The nature of the symbol (whether it's static or global) is determined by the character before its address:
@@ -18,7 +18,7 @@
   - **Q3**: What's the significance of the `__ksymtab_` prefix for exported symbols?
     - **Answer**: The `__ksymtab_` prefix indicates that the associated symbol has been exported for use by loadable kernel modules. It acts as an additional reference for exported symbols.
 
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Imagine `/proc/kallsyms` as a library catalog 📚. Each book (or symbol) has a tag indicating its lending policy:
     - Books with the tag 't' are **restricted reads** - you can only read them within a special room in the library.
     - Books with the tag 'T' are **general reads** - anyone in the library can borrow and read them.

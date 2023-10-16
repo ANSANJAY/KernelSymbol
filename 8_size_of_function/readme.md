@@ -2,7 +2,7 @@
 
 ---
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - The kernel contains a multitude of functions, each occupying a certain space in memory.
   - `sprint_symbol` is a utility provided by the kernel to fetch details about a symbol (like a function) based on its address.
   - The function retrieves:
@@ -22,5 +22,5 @@
   - **Q3**: How does `sprint_symbol` help in debugging kernel code?
     - **Answer**: It allows developers to resolve memory addresses back to human-readable function names and their respective sizes. This can be invaluable when analyzing crash logs, memory dumps, or tracing kernel operations.
   
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Imagine you're in a giant library 📚, and you have a magical bookmark 🔖 (the address). This bookmark tells you the exact page (address) of a particular story (function) but doesn't tell you its title or how long it is. Now, you use a special gadget (`sprint_symbol`) that, when shown the bookmark, tells you the story's title (function name), how many pages you're into the story (offset), how long the story is (size), and if it's part of a collection (module name). Now, instead of a vague page number, you have a clear picture of the story you're looking at! 📖✨.

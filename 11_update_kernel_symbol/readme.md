@@ -2,7 +2,7 @@
 
 ---
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - In the Linux kernel, symbols refer to addresses where variables and functions reside.
   - The provided code seems to illustrate a technique known as "function hooking" where you replace a function's address with your own to "intercept" calls to that function.
   - The `my_print_cpu_info` function serves as a hook, which gets called instead of the original function when the symbol address is overridden.
@@ -19,5 +19,5 @@
   - **Q3**: Why doesn't the kernel allow write access to certain sections by default?
     - **Answer**: It's a security and stability feature. Making certain sections read-only prevents accidental (or malicious) modifications that could crash the kernel or introduce vulnerabilities.
 
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Picture a museum 🏛️ with priceless artifacts. Some items are in the open, while others are behind glass. If you want to interact with the guarded artifacts, you'd need special permission and care. Similarly, in the kernel, certain memory sections are "guarded" (read-only) to prevent mishandling. If you force your way without precautions, alarms (kernel oops/panic) sound off. Always handle with extreme care and knowledge of what you're doing! 🚫🖐️.

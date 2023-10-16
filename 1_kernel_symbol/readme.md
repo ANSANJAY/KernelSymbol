@@ -1,6 +1,6 @@
 **Kernel Symbols** 🧠💡
 
-- **Explain the Technical Concept**:
+- **Concept**:
   - A *symbol* in the context of the kernel represents either a variable or a function.
   - In essence, it's a designated name corresponding to a memory space. This space can either store data (if it's a variable) or instructions (if it's a function).
   - The visibility and availability of kernel symbols vary depending on their declaration and are categorized into three primary levels:
@@ -18,7 +18,7 @@
   - **Q3**: How does `/proc/kallsyms` differ from `System.map` in terms of the symbols they contain?
     - **Answer**: `System.map` only contains symbols from code built into the kernel. In contrast, `/proc/kallsyms` includes symbols both from the built-in kernel code as well as from the loadable kernel modules.
 
-- **Explain in Simple Words for Memory**:
+- **In Simple words**:
   - Think of kernel symbols like labels on boxes in a warehouse. 📦💼
     - A *static* label is a secret one - only workers in a specific section of the warehouse know about it.
     - An *extern* label is more common. All the workers in the warehouse know about it.
